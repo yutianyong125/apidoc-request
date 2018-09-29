@@ -1,0 +1,12 @@
+{
+  "name": "apidoc-request",
+  "version": "1.0.0",
+  "description": "apidoc template for request",
+  "author": "yutianyong",
+  "bin": "bin/apidoc-request",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^7.0.0",
+    "winston": "^3.1.0"
+  }
+}

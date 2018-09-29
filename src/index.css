@@ -1,0 +1,124 @@
+@import '~antd/dist/antd.css';
+html,body{
+  position: relative;
+}
+
+.apiHeader{
+  position: relative;
+}
+
+.apiHeader .exportBtn{
+  position: absolute;
+  left: 50px;
+}
+
+.apiHeader .ant-menu-horizontal{
+  position: absolute;
+  right: 50px;
+}
+
+.apiHeader .ant-menu.ant-menu-dark .ant-menu-item-selected{
+  background: none;
+  border-bottom: 5px solid #1890ff;
+  line-height: 59px;
+  height: 59px;
+}
+
+.ant-card-bordered{
+  border: none;
+}
+
+.apiMenu{
+  width: 280px;
+  bottom: 0px;
+  position: fixed;
+  left: 0;
+  top: 124px; 
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.apiMenu .ant-menu-inline{
+  height: 100%;
+}
+
+.ant-tabs-bar.apiTabTitle {
+  background-color: white;
+  position: fixed;
+  top: 64px;
+  left: 280px;
+  right: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  /* width: 100%; */
+  border-bottom: 1px solid #e8e8e8;
+  z-index: 999;
+}
+
+.ant-tabs-bar{
+  border: none;
+}
+
+.apiTabContent {
+  padding: 20px;
+  position: fixed;
+  top: 80px;
+  left: 280px;
+  bottom: 61px;
+  right: 0;
+  overflow-y: auto;
+}
+
+.apiDesc{
+  margin-top: 50px;
+  position: relative;
+  padding: 18px 32px;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #ebedf0;
+}
+
+.apiDesc h4{
+  background: #ffffff;
+  position: absolute;
+  top: -12px;
+  /* left: 20px; */
+  color: #777;
+  margin-left: -8px;
+  padding: 0 8px;
+}
+
+.apiSearch{
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding:  10px;
+  width: 280px;
+  background: #ffffff;
+  height: 60px;
+}
+
+.apiFooter{
+  position: fixed;
+  bottom: 0;
+  left: 280px;
+  height: 60px;
+  right: 0;
+  border-top: 1px solid #e8e8e8;
+  background: #ffffff;
+  text-align: center;
+  line-height: 60px;
+  padding: 10px 20px 0 20px;
+}
+
+.apiRequestWrap{
+  position: relative;
+}
+
+.apiRequestWrap .ant-input-search-button{
+  width: 96px;
+}
+
+.apiRequestWrap .saveBtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}

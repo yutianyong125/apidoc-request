@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const fs = require('fs-extra');
+const winston = require('winston');
+
+const logger = winston.createLogger({
+  transports: [
+    new winston.transports.Console({
+      format: winston.format.simple(),
+      level: 'info'
+    }),
+  ]
+});
+
+const templateDirectory = fs.realpathSync(__dirname + '/../build');
+const docDirectory = fs.realpathSync(process.cwd());
+
+logger.info('templateDirectory: ' + templateDirectory);
+logger.info('docDirectory: ' + docDirectory);
+
+//check api_data.json exists
+const apiDataFileName = 'api_data.json';
+if (!fs.existsSync(docDirectory + '/' + apiDataFileName)) {
+  logger.error('api_data.json is not exists in '+ docDirectory);
+  process.exit(1);
+}
+
+try {
+  fs.copySync(templateDirectory, docDirectory);
+  logger.info('Done.');
+} catch (err) {
+  logger.error('replace files fail!');
+}
+
+process.exit(1);
